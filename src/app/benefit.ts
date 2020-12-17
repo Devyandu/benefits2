@@ -1,6 +1,11 @@
 export interface Benefit {
   name: string;
-  title: string;
+  code: string;
+  description: string;
+}
+export interface BenefitCategory {
+  code: string;
+  name: string;
   icon: string;
-  value: string;
+  benefits: Benefit[];
 }

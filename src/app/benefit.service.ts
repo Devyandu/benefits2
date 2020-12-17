@@ -1,45 +1,74 @@
 import { Injectable } from "@angular/core";
 import { Benefit } from "./benefit";
+import { BenefitCategory } from "./benefit";
 
 @Injectable({
   providedIn: "root"
 })
 export class BenefitService {
   constructor() {
-    this.benefits = [
+    this.categories = [
       {
+        code: "costshare",
         icon: "home",
-        name: "ovcopay",
-        title: "Office Visit Co-Pay",
-        value: "$25 per visit"
+        name: "Cost Sharing Features:Deductible and Out of pocket maximum",
+        benefits: [
+          {
+            code: "deductible",
+            name: "Deductible",
+            description:
+              "A health insurance deductible is the amount of money you pay out of pocket for healthcare services covered under your insurance plan before your plan begins to pay benefits for eligible expenses. There are different deductible numbers for individual and family. The deductible can also vary depending on whether you go to an in-network provider or out of network."
+          },
+          {
+            code: "oopmax",
+            name: "Out-Of-Pocket Maximum",
+            description:
+              "An out-of-pocket maximum is a predetermined, limited amount of money that an individual must pay before an insurance company or (self-insured employer) will pay 100 percent of an individual’s health care expenses for the remainder of the year."
+          }
+        ]
       },
       {
-        icon: "wheelchair_pickup",
-        name: "equipment",
-        title: "Durable Medical Equipment",
-        value: "$25 per visit"
-      },
-      {
-        icon: "fitness_center",
-        name: "fitness",
-        title: "Fitness Reimbursement",
-        value: "$150 per year"
-      },
-      {
+        code: "labs",
         icon: "sanitizer",
-        name: "sanitizer",
-        title: "Office Visit Co-Pay",
-        value: "$25 per visit"
+        name: "Blood Tests and other Lab Work",
+        benefits: [
+          {
+            code: "lab",
+            name: "Lab Services",
+            description: "This is a definiion of labs"
+          },
+          {
+            code: "indlab",
+            name: "Independent Facility/OutPatient Hospital Lab",
+            description:
+              "This is the definition of ooooo ooooooooooooooo oooooooooooooooooo"
+          }
+        ]
       },
       {
+        code: "provider",
         icon: "medical_services",
-        name: "medical",
-        title: "Office Visit Co-Pay",
-        value: "$25 per visit"
+        name: "Provider Visits",
+        benefits: [
+          {
+            code: "lab",
+            name: "Lab Services",
+            description: "here"
+          },
+          {
+            code: "indlab",
+            name: "Independent Facility/OutPatient Hospital Lab",
+            description: "here"
+          }
+        ]
       }
     ];
   }
-  private benefits: Benefit[];
+  private categories: BenefitCategory[];
+  private getCategories(): BenefitCategory[] {
+    return this.categories;
+  }
+  /*
   public getBenefits(): Benefit[] {
     return this.benefits;
   }
@@ -54,4 +83,5 @@ export class BenefitService {
       return x;
     }
   }
+  */
 }

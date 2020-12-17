@@ -12,6 +12,6 @@ export class BenefitsListComponent implements OnInit {
   benefits: Benefit[];
 
   ngOnInit() {
-    this.benefits = this.benefitService.getBenefits();
+    //this.benefits = this.benefitService.getBenefits();
   }
 }
