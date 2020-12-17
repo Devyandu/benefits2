@@ -1,0 +1,11 @@
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let benefit of benefits">
+    <mat-icon color="primary" matListIcon>{{benefit.icon}}</mat-icon>
+    <h3 matLine>{{benefit.title}}</h3>
+    <div matLine>{{benefit.value}}</div>
+    <a routerLink="/benefit/{{benefit.name}}"
+      ><mat-icon color="warn">more_vert</mat-icon>
+    </a>
+    <mat-divider *ngIf="!last"></mat-divider>
+  </mat-list-item>
+</mat-list>
