@@ -65,7 +65,7 @@ export class BenefitService {
     ];
   }
   private categories: BenefitCategory[];
-  private getCategories(): BenefitCategory[] {
+  public getCategories(): BenefitCategory[] {
     return this.categories;
   }
   /*
