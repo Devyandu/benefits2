@@ -16,6 +16,7 @@ export class BenefitService {
           {
             code: "deductible",
             name: "Deductible",
+            value: "$100 per year",
             description:
               "A health insurance deductible is the amount of money you pay out of pocket for healthcare services covered under your insurance plan before your plan begins to pay benefits for eligible expenses. There are different deductible numbers for individual and family. The deductible can also vary depending on whether you go to an in-network provider or out of network."
           },
