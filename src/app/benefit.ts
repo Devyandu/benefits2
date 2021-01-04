@@ -3,6 +3,7 @@ export interface Benefit {
   code: string;
   description: string;
   value: string;
+  subtext:string;
 }
 export interface BenefitCategory {
   code: string;

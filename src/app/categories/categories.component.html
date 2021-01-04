@@ -13,6 +13,7 @@
 			<mat-tab *ngFor="let benefit of category.benefits" label="{{benefit.name}}">
 				<mat-card>
 					<mat-card-title>{{benefit.value}}</mat-card-title>
+					<mat-card-subtitle>{{benefit.subtext}}</mat-card-subtitle>
 					<mat-card-content>{{benefit.description}}</mat-card-content>
 
 				</mat-card>
